@@ -1,9 +1,6 @@
 class AthleteController < ApplicationController
   before_action :authenticate_athlete!
 
-  def home
-  end
-
   def profile
   end
 

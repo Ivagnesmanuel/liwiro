@@ -29,7 +29,7 @@ class GymsController < ApplicationController
     if (@gym.already_joined(@gym,current_athlete))
       current_athlete.gyms.delete(@gym)
       respond_to do |format|
-        format.html { redirect_to @gym, notice: 'Gym was successfully leaved.' }
+        format.html { redirect_to @gym, notice: 'Gym was successfully left.' }
       end
     else
       respond_to do |format|

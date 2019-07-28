@@ -1,5 +1,66 @@
 <div class="container" style="text-align: center;">
 
+<% if athlete_signed_in? %>
+  <% if current_athlete.height.nil? || current_athlete.weight.nil? || current_athlete.age.nil?  %>
+    <div class="alert alert-danger" role="alert">
+    <%= image_tag("danger.png", :size =>"20x20" ) %> &nbsp; Take care, your body features are not available,
+     click <%= link_to 'here', athlete_settings_path %> or the gyms won`t be able to create a proper worksheet for you
+    </div>
+  <% end %>
+
+  <%= render 'layouts/carousel' %>
+  <hr>
+
+  <h1 style="text-align: center;">Search for new</h1>
+    <div class="card-body">
+      <div class="row" style="text-align: center;">
+       <div class="col-sm-4 mb-5 zoom">
+         <a href="/gyms"><%= image_tag("peso.svg", :size =>"150x150") %></a><br/>
+         <a class="btn btn-primary" href="/gyms">Gyms </a>
+       </div>
+       <div class="col-sm-4 mb-5 zoom" id="course">
+         <a href="/courses"><%= image_tag("course.svg", :size =>"150x150") %></a><br/>
+         <a class="btn btn-primary" href="/courses">Courses </a>
+       </div>
+       <div class="col-sm-4 mb-5 zoom">
+         <a href="/coupons"><%= image_tag("soldi.png", :size =>"150x150") %></a><br/>
+         <a class="btn btn-primary" href="/coupons">Coupons </a>
+       </div>
+      </div>
+      <br>
+    </div>
+
+<% elsif gym_signed_in? %>
+  <% if current_gym.address.nil? %>
+    <div class="alert alert-danger" role="alert">
+    <%= image_tag("danger.png", :size =>"20x20" ) %> &nbsp; Take care, you don't have an address,
+     click <%= link_to 'here', gym_address_path %> to add it or you won't be showed on the map
+    </div>
+  <% end %>
+
+  <%= render 'layouts/carousel' %>
+  <hr />
+
+  <div class="card-body">
+    <div class="row" style="text-align: center;">
+
+     <div class="col-sm-4 mb-5 zoom">
+       <a href="/gym/my_courses"><%= image_tag("course.svg", :size =>"150x150") %></a><br/>
+       <a class="btn btn-primary" href="/gym/my_courses">My Courses </a>
+     </div>
+     <div class="col-sm-4 mb-5 zoom">
+       <a href="/gym/my_coupons"><%= image_tag("soldi.png", :size =>"150x150") %></a><br/>
+       <a class="btn btn-primary" href="/gym/my_coupons">My Coupons </a>
+     </div>
+     <div class="col-sm-4 mb-5 zoom">
+       <a href="/gym/my_worksheets"><%= image_tag("worksheet.svg", :size =>"150x150") %></a><br/>
+       <a class="btn btn-primary" href="/gym/my_worksheets">My Worksheets </a>
+     </div>
+    </div>
+    <br>
+  </div>
+
+<% else %>
   <% if Rails.env.development? == false %>
     <div class="alert alert-danger" role="alert">
       <%= image_tag("danger.png", :size =>"20x20" ) %>
@@ -43,3 +104,5 @@
   <div class="col-sm-3 mb-5"><%= image_tag("soldi.png", :size =>"100x100") %><br /><h3>Buy!</h3></div>
 </div>
 <br/>
+
+  <% end %>

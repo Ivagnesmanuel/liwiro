@@ -1,9 +1,6 @@
 class GymController < ApplicationController
   before_action :authenticate_gym!
 
-  def home
-  end
-
   def profile
   end
 

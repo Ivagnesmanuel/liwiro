@@ -28,7 +28,6 @@ Rails.application.routes.draw do
   get '/login', to: 'home#login'
 
   #athlete routes
-  get '/athlete/home', to: 'athlete#home'
   get '/athlete/profile', to: 'athlete#profile'
   get '/athlete/settings', to: 'athlete#settings'
   get '/athlete/my_gyms', to: 'athlete#my_gyms'
@@ -38,7 +37,6 @@ Rails.application.routes.draw do
   post '/athlete/settings', to: 'athlete#change_settings'
 
   #gym routes
-  get '/gym/home', to: 'gym#home'
   get '/gym/profile', to: 'gym#profile'
   get '/gym/address', to: 'gym#address'
   get '/gym/my_courses', to: 'gym#my_courses'

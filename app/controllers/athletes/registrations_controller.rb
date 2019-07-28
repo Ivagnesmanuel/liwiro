@@ -57,13 +57,13 @@ class Athletes::RegistrationsController < Devise::RegistrationsController
 
   # The path used after sign up
   def after_sign_up_path_for(resource)
-    athlete_home_path
+    root_path
   end
 
   def check
     if (gym_signed_in?)
       flash[:notice] = "You are already signed in"
-      redirect_to(gym_home_path) && return
+      redirect_to(root_path) && return
     end
   end
 

@@ -23,13 +23,13 @@ class Athletes::SessionsController < Devise::SessionsController
 
   # The path used after sign in
   def after_sign_in_path_for(resource)
-    athlete_home_path
+    root_path
   end
 
   def check
     if (gym_signed_in?)
       flash[:notice] = "You are already signed in"
-      redirect_to(gym_home_path) && return
+      redirect_to(root_path) && return
     end
   end
 
