@@ -1,4 +1,12 @@
 <div class="container" style="text-align: center;">
+
+  <% if Rails.env.development? == false %>
+    <div class="alert alert-danger" role="alert">
+      <%= image_tag("danger.png", :size =>"20x20" ) %>
+      This is not a real business application, it is made only for studying purpose
+    </div>
+  <% end %>
+
     <br /><%= image_tag("Welcome3.png", :style=>"height:30%;width:90%;") %>
     <a class="btn btn-primary zoom" href="/guest"><h1><i class="fa fa-heartbeat"></i> Get Start! </h1></a>
 </div>
@@ -29,9 +37,9 @@
 <br />
 
 <div class="row" style="text-align: center;">
-  <div class="col-sm-3"><%= image_tag("cerca.png", :size =>"100x100") %><br /><h3>Search!</h3></div>
-  <div class="col-sm-3"><%= image_tag("contatto2.png", :size =>"100x100") %><br /><h3>Partecipate!</h3></div>
-  <div class="col-sm-3"><%= image_tag("like.png", :size =>"100x100") %><br /><h3>Evaluate!</h3></div>
-  <div class="col-sm-3"><%= image_tag("soldi.png", :size =>"100x100") %><br /><h3>Buy!</h3></div>
+  <div class="col-sm-3 mb-5"><%= image_tag("cerca.png", :size =>"100x100") %><br /><h3>Search!</h3></div>
+  <div class="col-sm-3 mb-5"><%= image_tag("contatto2.png", :size =>"100x100") %><br /><h3>Partecipate!</h3></div>
+  <div class="col-sm-3 mb-5"><%= image_tag("like.png", :size =>"100x100") %><br /><h3>Evaluate!</h3></div>
+  <div class="col-sm-3 mb-5"><%= image_tag("soldi.png", :size =>"100x100") %><br /><h3>Buy!</h3></div>
 </div>
 <br/>

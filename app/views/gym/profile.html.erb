@@ -1,19 +1,31 @@
 <!-- profile page -->
-<div id="features" class="card shadow p-3 mb-5 bg-white rounded" style="width: 25rem;">
-  <%= image_tag("palestra.jpg", :class => "card-img-top", :alt => "Card image cap") %>
-  <div class="card-body">
-    <h1><%= current_gym.username %></h1>
-    <p class="card-text"></p>
-    <p class="card-text">Email: <i><%= current_gym.email %> </i> </p>
-    <p class="card-text">Address: <i><%= current_gym.address %> </i></p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+
+      <div id="features" class="card shadow p-3 mb-5 bg-white rounded" style="width: 100%;">
+        <%= image_tag("palestra.jpg", :class => "card-img-top", :alt => "Card image cap") %>
+        <div class="card-body">
+          <h1><%= current_gym.username %></h1>
+          <p class="card-text"></p>
+          <p class="card-text">Email: <i><%= current_gym.email %> </i> </p>
+          <p class="card-text">Address: <i><%= current_gym.address %> </i></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-6">
+      <br/>
+      <div class="card"> <a class="btn btn-primary" href="/gym/address" >Change address</a></div>
+      <br/>
+      <div class="card"> <a class="btn btn-primary" href="/gym/my_courses" >My courses</a></div>
+      <br/>
+      <div class="card"> <a class="btn btn-primary" href="/gym/my_coupons" >My coupons</a></div>
+      <br/>
+      <div class="card"> <a class="btn btn-primary" href="/gym/my_worksheets" >My worksheets</a></div>
+    </div>
   </div>
-</div>
 
-<hr>
-
-<div class="text-right">
-<%= link_to "<button type='button' class='btn btn-primary navbar-btn' data-toggle='modal' data-target='#'>Change address</button>".html_safe, gym_address_path %>
-<%= link_to "<button type='button' class='btn btn-primary navbar-btn' data-toggle='modal' data-target='#'>My courses</button>".html_safe, gym_my_courses_path %>
-<%= link_to "<button type='button' class='btn btn-primary navbar-btn' data-toggle='modal' data-target='#'>My coupons</button>".html_safe, gym_my_coupons_path %>
-<%= link_to "<button type='button' class='btn btn-primary navbar-btn' data-toggle='modal' data-target='#'>My worksheets</button>".html_safe, gym_my_worksheets_path %>
 </div>

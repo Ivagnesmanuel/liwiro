@@ -1,20 +1,32 @@
-<div id="features" class="card shadow p-3 mb-5 bg-white rounded" style="width: 25rem;">
-  <%= image_tag("atleta.jpg", :class => "card-img-top", :alt => "Card image cap") %>
-  <div class="card-body">
-    <h1><%= current_athlete.username %></h1>
-    <p class="card-text">Email: <i><%= current_athlete.email %> </i></p>
-    <p class="card-text">Height: <i><%= current_athlete.height %> cm</i></p>
-    <p class="card-text">Weight: <i><%= current_athlete.weight %> kg</i></p>
-    <p class="card-text">Age: <i><%= current_athlete.age %> </i></p>
-  </div>
-</div>
-</br>
-<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
 
-<div id="link" class="text-right">
-<%= link_to "<button type='button'  class='btn btn-primary navbar-btn' data-toggle='modal' data-target='#'>Change my body features</button>".html_safe, athlete_settings_path %>
-<%= link_to "<button type='button'  class='btn btn-primary navbar-btn' data-toggle='modal' data-target='#'>My gyms</button>".html_safe, athlete_my_gyms_path %>
-<%= link_to "<button type='button'  class='btn btn-primary navbar-btn' data-toggle='modal' data-target='#'>My courses</button>".html_safe, athlete_my_courses_path %>
-<%= link_to "<button type='button'  class='btn btn-primary navbar-btn' data-toggle='modal' data-target='#'>My coupons</button>".html_safe, athlete_my_coupons_path %>
-<%= link_to "<button type='button'  class='btn btn-primary navbar-btn' data-toggle='modal' data-target='#'>My worksheets</button>".html_safe, athlete_my_worksheets_path %>
+      <div id="features" class="card shadow p-3 mb-5 bg-white rounded" style="width: 100%;">
+        <%= image_tag("atleta.jpg", :class => "card-img-top", :alt => "Card image cap") %>
+        <div class="card-body">
+          <h1><%= current_athlete.username %></h1>
+          <p class="card-text">Email: <i><%= current_athlete.email %> </i></p>
+          <p class="card-text">Height: <i><%= current_athlete.height %> cm</i></p>
+          <p class="card-text">Weight: <i><%= current_athlete.weight %> kg</i></p>
+          <p class="card-text">Age: <i><%= current_athlete.age %> </i></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-6">
+      <br/>
+      <div class="card"> <a class="btn btn-primary" href="/athlete/settings" >Change my body features</a></div>
+      <br/>
+      <div class="card"> <a class="btn btn-primary" href="/athlete/my_gyms" >My Gyms</a></div>
+      <br/>
+      <div class="card"> <a class="btn btn-primary" href="/athlete/my_courses" >My courses</a></div>
+      <br/>
+      <div class="card"> <a class="btn btn-primary" href="/athlete/my_coupons" >My coupons</a></div>
+      <br/>
+      <div class="card"> <a class="btn btn-primary" href="/athlete/my_worksheets" >My worksheets</a></div>
+    </div>
+  </div>
+
 </div>
