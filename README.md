@@ -1,5 +1,4 @@
 # Liwiro
-![img logo](http://i66.tinypic.com/mhtwxu.png)
 
 Liwiro is a Saas and REST web application based on Ruby on Rails for the “Laboratorio Architetture Software e Sicurezza informatica” course at university of Rome Sapienza.
 All the application is tested by Rspec and Cucumber.
