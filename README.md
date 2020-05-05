@@ -1,10 +1,20 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Ivagnesmanuel/Liwiro/master/app/assets/images/logo.png">
+</p>
+
+
 # Liwiro
-
-Liwiro is a Saas and REST web application based on Ruby on Rails for the “Laboratorio Architetture Software e Sicurezza informatica” course at university of Rome Sapienza.
+Liwiro is a Saas and REST web application based on Ruby on Rails, and made for the “Laboratorio Architetture Software e Sicurezza Informatica” course at La Sapienza University of Rome.
 All the application is tested by Rspec and Cucumber.
-For more info see
+For an overview of the project take a look at:
 
-- [Final Relation](https://drive.google.com/open?id=111cwm4lHE3hFrbGHXCLA3RyzC8T7ZoFM)
+- [Group relation](https://drive.google.com/open?id=111cwm4lHE3hFrbGHXCLA3RyzC8T7ZoFM)
+
+If you want more information about Maps e Geocoder functionalities, take a look at:
+
+- [My relation](https://drive.google.com/file/d/1wC3WA9VC4FHcMOUzlvc6-AOuTvHq3sWB/view?usp=drivesdk)
+
+***
 
 At the moment the application is also available on “Heroku” at <https://liwiro.herokuapp.com/>
 
